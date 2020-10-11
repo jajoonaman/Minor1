@@ -1,0 +1,46 @@
+#include <math.h>
+#include <stdio.h>
+//function to convert Binary to Octal
+int BinToOct(long long bin)
+{
+    int oct = 0, dec = 0, i = 0;
+
+    // converting binary to decimal
+    while (bin != 0)
+    {
+        dec += (bin % 10) * pow(2, i);
+        ++i;
+        bin /= 10;
+    }
+    i = 1;
+
+    // converting to decimal to octal
+    while (dec != 0)
+    {
+        oct += (dec % 8) * i;
+        dec /= 8;
+        i *= 10;
+    }
+    return oct;
+}
+
+//Driver Code
+
+int main() {
+
+    long long bin;
+    printf("Enter a Binary number: (0-255):\t");
+    scanf("%lld", &bin);
+
+    if(bin >= 0 && bin <= 11111111)
+    {
+        int c = BinToOct(bin);
+        printf("\nOctal Number = %d",c);
+    }
+
+    else
+        printf("\n.......Enter valid number.......");
+
+
+    return 0;
+}
