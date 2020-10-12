@@ -31,9 +31,9 @@ long int OctToBin(int oct)
 int main() 
 {
     long int oct;
-    printf("Enter an octal number (0-255):\t ");
+    printf("Enter an octal number (0-377):\t ");
     scanf("%ld", &oct);
-    if(oct >= 0 && oct <= 255)
+    if(oct >= 0 && oct <= 377)
     {
         long int b = OctToBin(oct);
         printf("\nBinary Number = %ld",b);
