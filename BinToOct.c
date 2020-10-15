@@ -29,17 +29,11 @@ int BinToOct(long long bin)
 int main() {
 
     long long bin;
-    printf("Enter a Binary number: (0-255):\t");
+    printf("Enter a Binary number:\t");
     scanf("%lld", &bin);
 
-    if(bin >= 0 && bin <= 11111111)
-    {
-        int c = BinToOct(bin);
-        printf("\nOctal Number = %d",c);
-    }
-
-    else
-        printf("\n.......Enter valid number.......");
+    int c = BinToOct(bin);
+    printf("\nOctal Number = %d",c);
 
 
     return 0;
