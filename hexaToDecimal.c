@@ -5,6 +5,7 @@
 #include<math.h>
 int HexToDecY(char hex[]);
 float HexToDecN(char hex[]);
+//Initialize static variable to '0' C standard
 static int i, len, dotPos;
 int main()
 {
