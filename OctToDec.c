@@ -26,16 +26,11 @@ long int OctToDec(long int oct)
 int main()
 {
     int OctNum;
-    printf("Enter the Octal Number (0-377):\t");
+    printf("Enter the Octal Number:\t");
     scanf("%d",&OctNum);
 
-    if(OctNum >= 0 && OctNum <= 377)
-    {
-       int a = OctToDec(OctNum);
-       printf("\nDecimal Number = %ld ",a);
-    }
-    else
-        printf("\n.......Enter valid number.......");
-
+    int a = OctToDec(OctNum);
+    printf("\nDecimal Number = %ld ",a);
+   
     return 0;
 }
