@@ -26,15 +26,14 @@ long int DecToOct(long int n)
 // Driver Code
 int main()
 {
-    int n;
-    printf("Enter the decimal number (0-255):\t");
-    scanf("%d",&n);
-    if (n>=0 && n<=255)
+    long int n;
+    printf("Enter the positive decimal number:\t");
+    scanf("%ld",&n);
+    if (n<0)
     {
-        DecToOct(n);
+        printf("........Please Enter the positive value........");
     }
     else
-        printf("\n.......Enter valid number.......");
-
+        DecToOct(n);
     return 0;
 }
