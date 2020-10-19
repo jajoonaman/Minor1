@@ -25,14 +25,14 @@ long int DecToBin(long int n)
 // Driver program to test above function
 int main()
 {
-    int n;
-    printf("Enter the decimal number (0-255):\n");
-    scanf("%d",&n);
-    if (n>=0 && n<=255)
+    long int n;
+    printf("Enter the positive decimal number:\t");
+    scanf("%ld",&n);
+    if (n<0)
     {
-        DecToBin(n);
+        printf("........Please Enter the positive value........");
     }
     else
-        printf("\n.......Enter valid number.......");
+        DecToBin(n);
     return 0;
 }
